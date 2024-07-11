@@ -1,6 +1,9 @@
 # Trabajo integrador
 
-**Integrantes**: ...
+**Integrantes**: 
+Octavio Cichello 
+Vergara Thiago 
+
 
 1. Copiar/clonar el repositorio
 2. Poner el nombre de los integrantes en el archivo README.md
