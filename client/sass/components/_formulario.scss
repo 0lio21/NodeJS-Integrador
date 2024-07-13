@@ -6,12 +6,11 @@ $color-input:gray;
     @content;
   }
 }
-
+/*
 .formulario{
   display: flex;
   flex-direction: row;
-  width: 600px;
-  height: 360px;
+  width: 100%;
   background-color: $color-central;
   &__input{
     margin: auto;
@@ -26,4 +25,19 @@ $color-input:gray;
   &__btn{
     background-color: aqua;
   }
+}
+*/
+
+input{
+  background-color: rgba(0, 0, 0, 0.172);
+  border: 0;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  transition: 0.2s;
+}
+
+input:hover, .input:focus{
+  opacity: 0.5;
+  transition: 0.2s;
 }

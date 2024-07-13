@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/styles.css">
   <title>Listado de tareas</title>
 </head>
+
 <body>
   <header class="py-3">
     <h1>Listado de tareas</h1>
     <hr />
   </header>
-  <main class="container">
+  <div class="container">
+    <table id="lista-tareas">
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Acciones</th>
+      
+    </table>
+    <table class="insercion">
 
-    <section class="formulario">
-      <form action="http://10.0.14.235:3000/tasks" method="post" id="formulario">
-        <input type="text" placeholder="Nombre" name="name">
-        <input type="text" placeholder="Descripcion" name="description">
-        <input type="submit" value="Submit!!" class="btn">
-      </form>
-    </section>
+      <tr>
+        <form id="formulario">
+          <td>
+            <input type="text" placeholder="Nombre" name="name">
+          </td>
+          <td>
+            <input type="text" placeholder="Descripcion" name="description">
+          </td>
+          <td>
+            <input type="submit" value="Submit!!" class="btn">
+          </td>
+        </form>
+        
+      </tr>
+    </table>
+
 
     
-    <ul id="lista-tareas">
-      <!--Acá se muestran las tareas-->
-    </ul>
-  </main>
+  </div>
 
-  <script src="scripts/tareas.js"></script>
+  <script src="scripts/tareas.js" type="module"></script>
+  <script src="scripts/crearTarea.js"></script>
 </body>
+
 </html>

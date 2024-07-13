@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formulario = document.getElementById("formulario");
   
     formulario.addEventListener("submit", async (event) => {
-      event.preventDefault();
+      
       
       const name = formulario.elements["name"].value;
       const description = formulario.elements["description"].value;
@@ -11,9 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
         name: name,
         description: description,
       };
+
+      console.log("Creando tarea:", task);
   
       try {
-        const response = await fetch("http://10.0.14.235:3000/tasks", {
+        const response = await fetch("http://127.0.0.1:8000/tasks", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

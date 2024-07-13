@@ -1,5 +1,33 @@
 .btn{
   padding: 0.5rem 1rem;
-  background-color: blue;
+  background-color: rgb(125, 125, 237);
+  border-radius: 20px;
+  border: 0;
+  transition: 0.2s;
+
 }
 
+.btn:hover{
+  transition: 0.2s;
+  background-color: rgba(125, 125, 237, 0.717);
+}
+
+input[type="checkbox"]{
+  margin-right: 5px;
+  transition: 0.2s;
+
+}
+input[type="checkbox"]:hover, .btn-danger:hover{
+  opacity: 0.5;
+  transition: 0.2s;
+
+}
+
+.btn-danger{
+  background-color: red;
+  border: 0;
+  border-radius: 10px;
+  padding: 4px 8px;
+  color: white;
+  transition: 0.2s;
+}

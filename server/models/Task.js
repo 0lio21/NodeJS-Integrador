@@ -19,7 +19,7 @@ const Task = db.define('Task', {
   },
   completed: {
     type: DataTypes.BOOLEAN,
-    default: false
+    defaultValue: false
   }
 }, {
   timestamps: false
