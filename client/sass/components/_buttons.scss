@@ -1,4 +1,4 @@
-.btn{
+.btn {
   padding: 0.5rem 1rem;
   background-color: rgb(125, 125, 237);
   border-radius: 20px;
@@ -7,27 +7,47 @@
 
 }
 
-.btn:hover{
+.btn:hover {
   transition: 0.2s;
   background-color: rgba(125, 125, 237, 0.717);
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
   margin-right: 5px;
   transition: 0.2s;
 
 }
-input[type="checkbox"]:hover, .btn-danger:hover{
+
+input[type="checkbox"]:hover,
+.btn-danger:hover,
+.btn-editar:hover,
+.btn-completado:hover
+{
   opacity: 0.5;
   transition: 0.2s;
 
 }
 
-.btn-danger{
-  background-color: red;
+
+.btn-danger,
+.btn-editar,
+.btn-completado
+{
   border: 0;
   border-radius: 10px;
   padding: 4px 8px;
   color: white;
   transition: 0.2s;
+}
+
+.btn-danger {
+  background-color: red;
+}
+.btn-editar {
+  background-color: rgb(251, 255, 0);
+  color: black;
+}
+.btn-completado{
+  background-color: greenyellow;
+  color: black;
 }

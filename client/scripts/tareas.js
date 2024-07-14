@@ -1,4 +1,4 @@
-import { completarTarea, borrarTarea } from "./actualizarTarea.js";
+import { completarTarea, borrarTarea, actualizarTarea } from "./actualizarTarea.js";
 /**
  * Obtiene las tareas de la base de datos
  * @returns {Array[Object]} - Un listado de tareas
@@ -25,8 +25,8 @@ const renderizarTareas = async () => {
   // Itera sobre cada tarea y crea un elemento <li> para cada una
   tareas.forEach(tarea => {
     let elemento = document.createElement('tr');
-
-    elemento.innerHTML = `<td>${tarea.name}</td> <td>${tarea.description}</td> `;
+    elemento.id = tarea.id;
+    elemento.innerHTML = `<td>${tarea.id}</td> <td>${tarea.name}</td> <td>${tarea.description}</td> `;
     let td = document.createElement('td');
     let checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
@@ -36,9 +36,14 @@ const renderizarTareas = async () => {
     let borrarElemento = document.createElement('button');
     borrarElemento.textContent = 'Borrar';
     borrarElemento.addEventListener('click', () => borrarTarea(tarea.id));
-    borrarElemento.className = 'btn-danger'
+    borrarElemento.className = 'btn-danger';
+    let editarElemento = document.createElement('button');
+    editarElemento.textContent = 'Editar';
+    editarElemento.className = 'btn-editar';
+    editarElemento.addEventListener('click', () => actualizarTarea(tarea.id));
     td.appendChild(checkbox);
     td.appendChild(borrarElemento);
+    td.appendChild(editarElemento);
     elemento.appendChild(td);
     listaTareas.appendChild(elemento);
   });
